@@ -17,7 +17,7 @@ public class GameSettings : MonoBehaviour
         Cursor.visible = false;
 
         // set aspect ratio
-        Screen.SetResolution(640, 480, true);
+        Screen.SetResolution(1600, 900, true);
 
         // set dimensions
         /*

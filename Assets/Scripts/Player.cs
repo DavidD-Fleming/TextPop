@@ -60,4 +60,9 @@ public class Player : MonoBehaviour
             transform.position = new Vector2(transform.position.x, screenHalfHeightInWorldUnits);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D triggerCollider)
+    {
+        GameObject.Find("Game").GetComponent<GameOver>().OnGameOver();
+    }
 }

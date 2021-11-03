@@ -1,0 +1,8 @@
+Text Pop By DavidD-Fleming
+Heya! This is Text Pop, a short game I made using Unity and C# to warm up my programming skills that I made in (6 hours so far). Text Pop is a game where you avoid incoming hazards by moving around the player which you control with your mouse. Additionally, each hazard is associated with either a letter from the English alphabet of a number 0-9. A player can pop that hazard by typing in the key associated with the hazard. The game gets progressively harder as time passes with hazards spawning more frequently and being generally faster. The simple goal is to survive for as long as possible!
+The first commit to Github was done to document what looks like a really cool ball bouncing simulation. I plan on finishing the project relatively soon but wanted to keep this saved somewhere because I thought it looked awesome!
+So far the biggest stifle I've had so far is my own stubborness! There were a few features I wanted to implement that took way longer then necessary because I wanted to find a shortcut or create my own method. I have since learned to think things through as solutions may be a lot easier then I think it is.
+My favorite feature of the game by far is colors and trails of hazards. Trails were a new feature I discovered on Unity and it is pretty cool and easy to learn. For colors, I associated each value of RGB with an in game value. For example, hazards grow more red the longer the game has been going. I think this adds a lot of color and makes the game look visually appealing.
+The features I would like to add are: Finishing the game (as of this commit).
+
+That's all!

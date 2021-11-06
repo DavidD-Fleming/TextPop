@@ -8,6 +8,7 @@ public class SettingsManager : MonoBehaviour
     // settings variables are set in HighScore.cs
 
     // settings gameobjects
+    public GameObject player;
     public GameObject settingsScreen;
     public GameObject resetScreen;
     public GameObject guideScreen;
@@ -54,7 +55,11 @@ public class SettingsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // turns player object on for reasons
+        if (Input.GetKey(KeyCode.D))
+        {
+            player.SetActive(true);
+        }
     }
 
     public void CloseSettings()
@@ -85,6 +90,12 @@ public class SettingsManager : MonoBehaviour
     public void OpenGuide()
     {
         guideScreen.SetActive(true);
+    }
+
+    // secret button so I can show off
+    public void MakePlayerInvisible()
+    {
+        player.SetActive(false);
     }
 
     // resets everything from highscore script

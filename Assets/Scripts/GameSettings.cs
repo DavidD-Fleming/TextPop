@@ -17,7 +17,8 @@ public class GameSettings : MonoBehaviour
         Time.timeScale = 0;
 
         // set aspect ratio
-        Screen.SetResolution(1600, 900, true);
+        // Screen.SetResolution(1600, 900, true);
+        Screen.fullScreen = false;
 
         // set dimensions
         /*

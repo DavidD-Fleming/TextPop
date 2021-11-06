@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d15abd62408a7f49bafe5abbf8745b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMinMax: {x: 4, y: 10}
+  speedMinMax: {x: 6, y: 10}
   trailEndWidth: 0
 --- !u!58 &-6370155259221603193
 CircleCollider2D:

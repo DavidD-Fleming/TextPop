@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     float halfPlayerHeight;
 
     // trail
+    TrailRenderer playerTrail;
     public int trailEndWidth;
     public float trailLength;
 
@@ -26,12 +27,12 @@ public class Player : MonoBehaviour
         screenHalfHeightInWorldUnits = Camera.main.orthographicSize - halfPlayerHeight;
 
         // set trail
-        TrailRenderer playerTrail = transform.GetChild(0).GetComponent<TrailRenderer>();
+        playerTrail = transform.GetChild(0).GetComponent<TrailRenderer>();
         playerTrail.startColor = new Color32(255, 255, 255, 255);
         playerTrail.endColor = new Color32(0, 0, 0, 0);
         playerTrail.endWidth = trailEndWidth;
-        //playerTrail.startWidth = 1;
-        playerTrail.time = trailLength;
+        playerTrail.startWidth = 0.75f;
+        // set trail length in update
     }
 
     // Update is called once per frame
@@ -58,6 +59,16 @@ public class Player : MonoBehaviour
         if (transform.position.y > screenHalfHeightInWorldUnits)
         {
             transform.position = new Vector2(transform.position.x, screenHalfHeightInWorldUnits);
+        }
+
+        // set trails on or off
+        if (ZPlayerPrefs.GetInt("TrailsOn") == 1)
+        {
+            playerTrail.time = trailLength;
+        }
+        else
+        {
+            playerTrail.time = 0;
         }
     }
 

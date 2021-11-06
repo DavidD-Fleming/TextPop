@@ -13,8 +13,8 @@ public class GameSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // makes cursor invisible so the player only sees player object
-        Cursor.visible = false;
+        // start time at 0
+        Time.timeScale = 0;
 
         // set aspect ratio
         Screen.SetResolution(1600, 900, true);

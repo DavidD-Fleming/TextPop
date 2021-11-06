@@ -10,5 +10,4 @@ public static class Difficulty
     {
         return Mathf.Clamp01(Time.timeSinceLevelLoad / secondsToMaxDifficulty);
     }
-
 }

@@ -26,6 +26,7 @@ public class Hazard : MonoBehaviour
     {
         // setting detonation code
         char[] letterBank = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+        // ;)
         int letterKey = Random.Range(0, 35);
         detonationKey = letterBank[letterKey];
         TextMeshPro letterText = transform.GetChild(1).GetComponent<TextMeshPro>();
@@ -36,7 +37,13 @@ public class Hazard : MonoBehaviour
         halfHazardSize = new Vector2(transform.localScale.x / 2f, transform.localScale.y / 2f);
 
         // set speed
-        speed = Mathf.Lerp(speedMinMax.x, speedMinMax.y, Difficulty.GetDifficultyPercent());
+        if (DifficultySetting.ReturnDifficulty() == 2)
+        {
+            speed = speedMinMax.y;
+        } else
+        {
+            speed = Mathf.Lerp(speedMinMax.x, speedMinMax.y, Difficulty.GetDifficultyPercent());
+        }
 
         // determine color based on numbers
         byte redValue = (byte)Mathf.Lerp(0, 255, Difficulty.GetDifficultyPercent());

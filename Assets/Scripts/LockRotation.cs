@@ -13,8 +13,11 @@ public class LockRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // locks rotation so text is always upright
-        var rotation = Quaternion.LookRotation(Vector3.forward);
-        transform.rotation = rotation;
+        // locks rotation so text is always upright if it isn't hard mode
+        if (DifficultySetting.ReturnDifficulty() != 2)
+        {
+            var rotation = Quaternion.LookRotation(Vector3.forward);
+            transform.rotation = rotation;
+        }
     }
 }

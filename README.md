@@ -1,5 +1,6 @@
-#Text Pop
-##By DavidD-Fleming
+# Text Pop
+## By DavidD-Fleming
+
 Heya! This is Text Pop, a short game I made using Unity and C# to warm up my programming skills. Text Pop was created over the course of 4 days (~20 hours). The point of the game is to survive for as long as possible controlling a player against incoming hazards. You can control the player using your mouse and can pop the hazard by typing in its associated key (A-Z, 0-9). The game gets progressively harder as time passes with hazards spawning more frequently and being generally faster. The player can also change the difficulty from easy to normal to hard.
 
 The first commit to Github was done to document what I thought looked like a really cool bouncing ball simulator. As is (in that version), the balls only bounce up and down but they can get more unpredictable by changing the max angle in the spawner gameobject.
